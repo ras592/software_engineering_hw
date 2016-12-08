@@ -1,0 +1,67 @@
+<div class="chat container">
+  <h3 id="title"><span id="username">{{username}}</span> [<span id="email">{{email}}</span>]</h3>
+  <div class="panel panel-default col-sm-8" id="messages_panel">
+    <div class="panel-heading">
+      <h3 class="panel-title">Conversation with: <span id="conversation_title"></span></h3>
+    </div>
+    <div class="panel-body">
+      <ul id="messages"></ul>
+    </div>
+  </div>
+  <div class="panel panel-default col-sm-offset-1 col-sm-3" id="users_panel">
+    <div class="panel-heading">
+      <h3 class="panel-title">Users</h3>
+    </div>
+    <div id="user_list" class="list-group">
+    </div>
+  </div>
+  <form class="chat_form form-horizontal" action="">
+    <div class="col-sm-10" id="chat_input_div">
+      <input id="chat_input" class="form-control" autocomplete="off" />
+    </div>
+    <div class="col-sm-2" id="chat_send_div">
+      <button type="submit" class="btn btn-primary">Send</button>
+    </div>
+  </form>
+
+  <!-- Admin Modal -->
+  <div class="modal fade" id="adminCensorModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Link Filter Admin</h4>
+        </div>
+        <div class="modal-body">
+          <p>Warning this link <i id="admin_modal_link_value"></i> could be dangerous.</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" id="censor_button" class="btn btn-default" data-dismiss="modal">Censor</button>
+            <button type="button" id="safe_button" class="btn btn-default" data-dismiss="modal">Safe Link</button>
+            <button type="button" id="link_button" class="btn btn-default" data-dismiss="modal">Go to Link</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Back</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="censorModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Link Filter</h4>
+        </div>
+        <div class="modal-body">
+          <p>Warning this link <i id="modal_link_value"></i> could be dangerous.</p>
+
+        </div>
+        <div class="modal-footer">
+            <button type="button" id="link_button" class="btn btn-default" data-dismiss="modal">Go to Link</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Back</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

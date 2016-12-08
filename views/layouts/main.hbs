@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+    <title>{{#if title}}{{ title }}{{else}}Software Engineering Project{{/if}}</title>
+
+    <!-- CSS Styles -->
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Custom CSS Styles -->
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <!-- JavaScript Imports -->
+    <!-- Socket.IO -->
+    <script src="/socket.io/socket.io.js" defer></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js" defer></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous" defer></script>
+    {{#if ret_obj.import_chat_js }}
+    <!-- Chat.js -->
+    <script src="js/chat.js" defer></script>
+    {{/if}}
+</head>
+<body>
+    <div class="navbar navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">
+                    <img src="img/logo.ico" alt="Shield Logo" class="logo_banner">
+                </a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Protected Chat</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Home</a></li>
+                    {{#if session.authenticated}}
+                    <li><a href="/chat">Chat</a></li>
+                    {{/if}}
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    {{#if session.authenticated}}
+                    <li><a href="/logout">Logout</a></li>
+                    {{ else }}
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/signup">Sign Up</a></li>
+                    {{/if}}
+                </ul>
+            </div>
+        </div>
+    </div>
+    {{{ body }}}
+</body>
+</html>

@@ -1,0 +1,72 @@
+/* Fix user-agent */
+
+* {
+  box-sizing: border-box;
+}
+
+.logo_banner {
+    margin-top: -5px;
+    width: 32px;
+}
+
+/* Chat CSS */
+
+.chat {
+  font: 13px Helvetica, Arial;
+}
+
+#chat_input_div {
+  padding-right: 2px;
+}
+
+#chat_send_div {
+  padding-left: 2px;
+}
+
+#user_list {
+  margin-bottom: 20px;
+  height: 400px;
+}
+
+#messages_panel, #users_panel {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+#messages {
+  list-style-type: none;
+  overflow-y: scroll;
+  word-wrap: break-word;
+  margin: 0;
+  padding: 0;
+  height: 400px;
+}
+
+#messages li {
+  padding: 5px 10px;
+}
+
+#messages li:nth-child(odd) {
+  background: #eee;
+}
+
+a.handled:link {
+    text-decoration: none;
+    color: black;
+}
+
+a.handled:visited {
+    text-decoration: none;
+    color: black;
+}
+
+a.handled:hover {
+    text-decoration: none;
+    cursor: not-allowed;
+    color: black;
+}
+
+a.handled:active {
+    text-decoration: none;
+    color: black;
+}
