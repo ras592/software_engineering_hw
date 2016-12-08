@@ -166,18 +166,21 @@ function checkCensorList(link_obj, socket, msg) {
 
 function toURL(str) {
     var top_level_domains = ['.com', '.org', '.edu', '.gov', '.uk', '.net', '.ca', '.mil', '.info', '.ru', '.io'];
-    var protocol = '';
+    var protocol = 'http://';
     var remainder = str;
     var host_name = '';
     var path = '';
+    var add_protocol_bool = true;
 
     // protocol
     if (str.indexOf('http://') !== -1) {
         protocol = str.substring(0, 'http://'.length);
         remainder = str.substring('http://'.length);
+        add_protocol_bool = false;
     } else if(str.indexOf('https://') !== -1) {
         protocol = str.substring(0, 'https://'.length);
         remainder = str.substring('http://'.length);
+        add_protocol_bool = false;
     }
 
     // top level domain / host name split
@@ -187,10 +190,14 @@ function toURL(str) {
             var host_name_idx = idx + top_level_domains[top_level_idx].length;
             host_name = remainder.substring(0, host_name_idx);
             path = remainder.substring(host_name_idx);
+            var url = str;
+            if(add_protocol_bool) {
+                url = protocol + str;
+            }
             return {
                 protocol: protocol,
                 host_name: host_name,
-                url: str,
+                url: url,
                 path: path
             }
         }
