@@ -10,7 +10,8 @@ var express = require('express'),
     index = require('./app/controllers/index.server.controller'),
     users = require('./app/controllers/users.server.controller'),
     errorController = require('./app/controllers/error.server.controller'),
-    chat = require('./app/controllers/chat.server.controller');
+    chat = require('./app/controllers/chat.server.controller'),
+    censor = require('./app/controllers/censor.server.controller');
 
 var app = require('express')();
 var http = require('http').Server(app);
@@ -75,6 +76,10 @@ MongoClient.connect(url, function(err, db) {
         chat.init(db); // need database connection for chat file
 
         app.get('/chat', isAuthenticated, attachDB, chat.render);
+        app.get('/censor', isAuthenticated, censor.render)
+           .post('/censor', isAuthenticated, attachDB, censor.censor);
+        app.get('/censor_api', isAuthenticated, attachDB, censor.get_list)
+           .post('/censor_api', isAuthenticated, attachDB, censor.delete_censor);
         app.get('/login', users.render)
            .post('/login', attachDB, users.login);
         app.get('/signup', users.render_signup)

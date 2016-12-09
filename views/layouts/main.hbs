@@ -19,6 +19,10 @@
     <!-- Chat.js -->
     <script src="js/chat.js" defer></script>
     {{/if}}
+    {{#if censor_api }}
+    <!-- Censor.js -->
+    <script src="js/censor.js" defer></script>
+    {{/if}}
 </head>
 <body>
     <div class="navbar navbar-inverse" role="navigation">
@@ -40,6 +44,9 @@
                     <li><a href="/">Home</a></li>
                     {{#if session.authenticated}}
                     <li><a href="/chat">Chat</a></li>
+                        {{#if session.admin }}
+                    <li><a href="/censor">Censor Admin</a></li>
+                        {{/if}}
                     {{/if}}
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
