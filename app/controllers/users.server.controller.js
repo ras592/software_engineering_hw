@@ -76,9 +76,16 @@ function query_login(req, res, email, pass) {
             console.log(error);
             login(login_resp);
         } else {
-            login_resp.error = false;
-            login_resp.user = result;
-            login(login_resp);
+            if (result === null) {
+                login(login_resp);
+            } else if (result.hasOwnProperty('username') !== undefined &&
+                result.hasOwnProperty('email') !== undefined){
+                login_resp.error = false;
+                login_resp.user = result;
+                login(login_resp);
+            } else {
+                login(login_resp);
+            }
         }
     });
 }
