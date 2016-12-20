@@ -1,11 +1,11 @@
 ## Protected Chat Application
 
 ### Installation Instructions (Git)
-[![Installation with Git](./readme_video.png)](https://www.youtube.com/Ds4Zy8Ara4k "Installation with Git")
-https://www.youtube.com/Ds4Zy8Ara4k
+[![Installation with Git](./readme_video.png)](https://www.youtube.com/watch?v=Ds4Zy8Ara4k "Installation with Git")
+https://www.youtube.com/watch?v=Ds4Zy8Ara4k
 <br>
-[![Downloading without Git](./readme_video.png)](https://www.youtube.com/X3g2ptupuZk "Downloading without Git")
-https://www.youtube.com/X3g2ptupuZk
+[![Downloading without Git](./readme_video.png)](https://www.youtube.com/watch?v=X3g2ptupuZk "Downloading without Git")
+https://www.youtube.com/watch?v=X3g2ptupuZk
 
 Github Repository https://github.com/ras592/software_engineering_hw
 
