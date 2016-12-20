@@ -1,6 +1,10 @@
 ## Protected Chat Application
 
 ### Installation Instructions (Git)
+<iframe title="Installation with Git" width="560" height="315" src="https://www.youtube.com/embed/Ds4Zy8Ara4k" frameborder="0" allowfullscreen></iframe>
+<br>
+<iframe title="Downloading without Git" width="560" height="315" src="https://www.youtube.com/embed/X3g2ptupuZk" frameborder="0" allowfullscreen></iframe>
+
 Github Repository https://github.com/ras592/software_engineering_hw
 
 1. Clone the repository
