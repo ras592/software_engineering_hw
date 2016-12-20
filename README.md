@@ -36,5 +36,5 @@ Github Repositroy https://github.com/ras592/software_engineering_hw
 7. Open in a web browser the application at localhost:3000
 
 Links for downloads:
-https://nodejs.org/en/
-https://www.mongodb.com/download-center?jmp=nav#community
+- https://nodejs.org/en/
+- https://www.mongodb.com/download-center?jmp=nav#community
