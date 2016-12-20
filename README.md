@@ -1,7 +1,7 @@
 ## Protected Chat Application
 
 ### Installation Instructions (Git)
-Github Repositroy https://github.com/ras592/software_engineering_hw
+Github Repository https://github.com/ras592/software_engineering_hw
 
 1. Clone the repository
 
